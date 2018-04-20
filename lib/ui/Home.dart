@@ -6,13 +6,13 @@ class Home extends StatelessWidget{
     return new Scaffold(
       appBar: new AppBar(
         backgroundColor: Colors.green,
-        title: new Text("MyApp"),
+        title: new Text("ZaroSla - water my plants",softWrap: true, maxLines: 2, textDirection: TextDirection.rtl,),
         actions: <Widget>[
           new IconButton(
               icon: new Icon(Icons.print),
               onPressed: () => debugPrint("Icone tapped")),
           new IconButton(
-              icon: new Icon(Icons.ac_unit),
+              icon: new Icon(Icons.notifications_none),
               onPressed: () => debugPrint("Second tap"))
 
         ],
@@ -27,7 +27,23 @@ class Home extends StatelessWidget{
           ),
           backgroundColor: Colors.lightGreen.shade400,
           //body: new Text("my text", textDirection: TextDirection.ltr,),
-        )
+          body: new ListView(
+            children: <Widget>[
+              new ListTile(
+                leading: new Icon(Icons.calendar_today),
+                title: new Text('Calendar'),
+              ),
+              new ListTile(
+                leading: new Icon(Icons.photo_album),
+                title: new Text('Photo Album'),
+              ),
+              new ListTile(
+                leading: new Icon(Icons.web),
+                title: new Text('zarosla.pl'),
+              ),
+            ],
+          ),
+        ),
 
       ),
       bottomNavigationBar: new BottomNavigationBar(items: [
