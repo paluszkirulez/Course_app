@@ -18,6 +18,12 @@ class Home extends StatelessWidget{
         ],
       ),
       backgroundColor: Colors.lightGreen,
+      floatingActionButton: new FloatingActionButton(
+          onPressed: () => debugPrint("pressedd"),
+          backgroundColor: Colors.green.shade600,
+          tooltip: "Check what you can add",
+          child: new Icon(Icons.add_circle,color: Colors.white,),
+      ),
       drawer: new Drawer(
         child: new Scaffold(
           appBar: new AppBar(
